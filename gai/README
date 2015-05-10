@@ -1,0 +1,15 @@
+Two files included:
+
+1)'gai.conf' contains an example. Plz modify the /etc/gai.conf according to the need.
+
+2)'addr.sh' is to modify the contents in /etc/gai.conf.
+
+add/delete functions are provided 
+usage: add|del precedence|label PREFIX VALUE
+
+$ sudo ./addr.sh add precedence ::ffff:0:0/96 100
+$ sudo ./addr.sh add precedence 64:ff9b::/96 10
+
+will prioritize the IPv4 compatible prefix over the NAT64 prefix 
+
+we need super user's right to modify /etc/gai.conf
